@@ -1,0 +1,133 @@
+body {
+  background: #EEF0F8;
+  display: flex;
+  flex-direction: column;
+  color: #3F4254;
+}
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 13px !important;
+  font-weight: 400;
+  font-family: Poppins, Helvetica, "sans-serif";
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1199.98px){
+  html, body {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 991.98px){
+  html, body {
+    font-size: 12px !important;
+  }
+}
+
+
+a, button {
+  outline: 0 !important;
+}
+
+a {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  color: #3699FF;
+  text-decoration: none;
+  background-color: transparent;
+
+  &:hover{
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+}
+
+.pt-6, .py-6 {
+  padding-top: 1.5rem !important;
+}
+
+.font-size-sm {
+  font-size: 0.925rem;
+}
+.text-muted {
+  color: #B5B5C3 !important;
+}
+
+.btn-primary{
+  color: #FFFFFF;
+  background-color: #3699FF;
+  border-color: #3699FF;
+  border-radius: 0.42rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+ .svg-icon svg g [fill] {
+    transition: fill 0.3s ease;
+    fill: #FFFFFF;
+  }
+}
+
+.svg-icon.svg-icon-md svg {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}
+
+.custom-control-label::before, .custom-file-label, .custom-select {
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-select-sm {
+  height: calc(1.35em + 1.1rem + 2px);
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  padding-left: 0.75rem;
+  font-size: 0.925rem;
+}
+
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+}
+
+.form-control:active, .form-control.active, .form-control:focus, .form-control.focus {
+  box-shadow: none !important;
+}
+
+.table.table-head-custom thead tr, .table.table-head-custom thead th {
+  font-weight: 600;
+  color: #B5B5C3 !important;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.table.table-separate th, .table.table-separate td {
+  border-top: 0;
+  border-bottom: 1px solid #EBEDF3;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0.5em;
+  display: inline-block;
+  width: auto;
+}
+.form-control-sm {
+  height: calc(1.35em + 1.1rem + 2px);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.925rem;
+  line-height: 1.35;
+  border-radius: 0.28rem;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+  text-align: right;
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+

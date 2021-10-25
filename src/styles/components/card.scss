@@ -1,0 +1,50 @@
+.card{
+
+  &.card-custom{
+    box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+    border: 0;
+
+    & > .card-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      flex-wrap: wrap;
+      min-height: 70px;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: transparent;
+
+
+      .card-title{
+        font-weight: 500;
+        font-size: 1.275rem;
+        color: #181C32;
+
+        display: flex;
+        align-items: center;
+        margin: 0.5rem;
+        margin-left: 0;
+
+        .card-label {
+          margin: 0 0.75rem 0 0;
+          flex-wrap: wrap;
+
+          font-weight: 500;
+          font-size: 1.275rem;
+          color: #181C32;
+        }
+      }
+      .card-toolbar{}
+        button{
+          //background-color: #3699FF;
+          //border-color: #3699FF;
+          padding: 0.65rem 1rem;
+        }
+    }
+
+    & > .card-body{
+      padding: 2rem 2.25rem;
+    }
+
+  }
+}

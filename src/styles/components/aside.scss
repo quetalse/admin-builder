@@ -1,0 +1,264 @@
+.flex-row-auto {
+  flex: 0 0 auto;
+}
+.flex-column-auto {
+  flex: none;
+}
+
+.aside {
+  background-color: #1e1e2d;
+  width: 265px;
+
+  &-menu{
+    .menu-nav{
+      margin: 0;
+      list-style: none;
+      padding: 15px 0;
+
+      & > .menu-section{
+        margin: 20px 0 0 0;
+        height: 40px;
+
+        .menu-text{
+          color: #4c4e6f;
+
+          font-size: 0.9rem;
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.3px;
+        }
+      }
+
+      .menu-section{
+        display: flex;
+        padding: 0 25px;
+
+        .menu-text {
+          display: flex;
+          margin: 0;
+          padding: 0;
+          align-items: center;
+        }
+      }
+
+      & > .menu-item{
+        position: relative;
+        margin: 0;
+
+        & > .menu-link{
+          padding: 9px 25px;
+          cursor: pointer;
+          min-height: 44px;
+
+          .menu-icon{
+            color: #494b74;
+            flex: 0 0 35px;
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .menu-item {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        float: none;
+        padding: 0;
+
+        & > .menu-link{
+
+          display: flex;
+          flex-grow: 1;
+          align-items: stretch;
+          margin: 0;
+          //padding: 0;
+          text-decoration: none;
+          position: relative;
+          outline: none;
+
+          & > .menu-icon{
+            display: flex;
+            align-items: center;
+            line-height: 0;
+
+            svg {
+              height: 23px;
+              width: 23px;
+              margin-left: -2px;
+            }
+
+            .menu-text {
+              color: #a2a3b7;
+
+              font-weight: 400;
+              font-size: 1rem;
+              text-transform: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 25px;
+  height: 65px;
+
+  .brand-toggle{
+
+    box-shadow: none !important;
+
+    .svg-icon svg {
+      transition: all 0.15s ease;
+    }
+  }
+
+  .brand-logo{
+    display: flex;
+  }
+}
+
+@media (min-width: 992px){
+  .brand {
+    background-color: #1a1a27;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 991.98px){
+  .aside {
+    //background: #ffffff;
+    box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.75);
+
+    z-index: 1001;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: left 0.3s ease, right 0.3s ease, bottom 0.3s ease, top 0.3s ease;
+    left: -295px;
+    width: 275px;
+  }
+}
+
+@media (max-width: 991.98px){
+  .aside.aside-on {
+    transition: left 0.3s ease, right 0.3s ease, bottom 0.3s ease, top 0.3s ease;
+    left: 0;
+  }
+}
+
+@media (max-width: 991.98px){
+  .aside-overlay {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 991.98px){
+  .aside-overlay {
+    display: block !important;
+    width: 100% !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1000;
+    -webkit-animation: animation-offcanvas-fade-in 0.6s ease 1;
+    animation: animation-offcanvas-fade-in 0.6s ease 1;
+  }
+}
+@media (min-width: 992px){
+  .aside-minimize:not(.aside-minimize-hover) {
+    .aside {
+      width: 70px;
+    }
+    .brand {
+      justify-content: center;
+
+      .brand-toggle .svg-icon svg {
+        transition: all 0.15s ease;
+        transform: rotate(180deg);
+      }
+    }
+
+    .aside-menu .menu-nav {
+      padding: 15px 0;
+
+      & > .menu-section{
+        justify-content: center;
+
+        .menu-text{
+          display: none;
+        }
+      }
+
+      .menu-item{
+        background: transparent;
+
+        .menu-link .menu-text {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991.98px){
+  .brand {
+    display: none;
+  }
+}
+
+#kt_aside_menu_wrapper{
+  overflow: hidden;
+}
+
+@media (min-width: 992px){
+  .brand .btn.active .svg-icon svg:hover g [fill], .brand .btn:hover .svg-icon svg:hover g [fill] {
+    transition: fill 0.3s ease;
+  }
+}
+
+@media (min-width: 992px){
+  .brand .btn.active .svg-icon svg:hover g [fill], .brand .btn:hover .svg-icon svg:hover g [fill] {
+    transition: fill 0.3s ease;
+  }
+}
+.svg-icon svg g [fill] {
+  transition: fill 0.3s ease;
+  fill: #B5B5C3;
+}
+
+.brand-toggle span:hover{
+   &  svg g [fill]{
+      fill: #3699FF;
+  }
+}
+
+.aside-menu .menu-nav > .menu-item > .menu-link .menu-text {
+  color: #a2a3b7;
+}
+.aside-menu .menu-nav > .menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover {
+  transition: background-color 0.3s;
+}
+
+.menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover > .menu-link {
+  background-color: #1b1b28;
+}
+
+.menu-nav > .menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover > .menu-link .menu-icon {
+  color: #3699FF;
+}
+.aside-menu .menu-nav > .menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover > .menu-link .menu-icon.svg-icon svg g [fill] {
+  transition: fill 0.3s ease;
+  fill: #3699FF;
+}
+
+.aside-menu .menu-nav > .menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover > .menu-link .menu-text {
+  color: #ffffff;
+}

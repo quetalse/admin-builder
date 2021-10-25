@@ -1,0 +1,70 @@
+.flex-root {
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  -ms-flex: 1 0 0px;
+}
+
+.flex-column-fluid {
+  flex: 1 0 auto;
+}
+
+.flex-row-fluid {
+  flex: 1 auto;
+  -ms-flex: 1 0 0px;
+  min-width: 0;
+}
+
+.content{
+
+  & > .d-flex{
+    width: 100%;
+    justify-content: center;
+
+    & > div{
+      width: 90%;
+    }
+  }
+}
+
+
+.dataTables_wrapper{
+
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12.5px;
+    margin-left: -12.5px;
+
+    div.dataTables_length {
+      label {
+        font-weight: normal;
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      select {
+        width: auto;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+  .content {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 991.98px){
+  .content {
+    padding: 15px 0;
+  }
+}
+
+
+#overlay{
+  display: none;
+}

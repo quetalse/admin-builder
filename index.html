@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="admin panel builder"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Admin Panel Builder</title>
+
+    <link rel="shortcut icon" href="src/assets/img/favicon.png" />
+<!--    <link href="http://localhost:8092/app/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>-->
+<!--    <link href="http://localhost:8092/app/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css"/>-->
+
+    <link rel="stylesheet" href="./src/styles/main.scss" type="text/css">
+<!--    <link href="http://localhost:8092/app/css/style.bundle.css" rel="stylesheet" type="text/css"/>-->
+<!--    <link href="http://localhost:8092/app/css/pages/wizard/wizard-4.css" rel="stylesheet" type="text/css"/>-->
+
+
+<!--<link href="http://localhost:8092/app/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css"/>-->
+<!--<link href="http://localhost:8092/app/css/themes/layout/header/menu/light.css" rel="stylesheet" type="text/css"/>-->
+<!--    <link href="http://localhost:8092/app/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css"/>-->
+<!--    <link href="http://localhost:8092/app/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css"/>-->
+
+<!--<link href="/app/plugins/custom/datatables/datatables.bundle.css?id=394a8abc4eb50ad20d3a" rel="stylesheet" type="text/css"/>-->
+<!--<link href="/app/plugins/custom/datatables/datatables.bundle.css?id=394a8abc4eb50ad20d3a" rel="stylesheet" type="text/css"/>-->
+<!--<link href="/app/css/app.css?id=9de054e4db8962d21521" rel="stylesheet" type="text/css"/>-->
+</head>
+<body>
+
+    <div id="kt_header_mobile" class="header-mobile">
+        <div class="mobile-logo">
+            <a href="http://localhost:8092"></a>
+        </div>
+        <div class="d-flex align-items-center">
+            <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+                <span></span>
+            </button>
+            <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle"></button>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column flex-root">
+        <div class="d-flex flex-row flex-column-fluid page">
+            <div class="aside aside-left d-flex flex-column flex-row-auto" id="kt_aside">
+                <div class="brand flex-column-auto " id="kt_brand">
+                    <div class="brand-logo">
+                        <a href="http://localhost:8092"></a>
+                    </div>
+                    <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
+                        <span class="svg-icon svg-icon-xl">
+                            <!--begin::Svg Icon | path:app/media/svg/icons/Navigation/Angle-double-left.svg-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <polygon points="0 0 24 0 24 24 0 24"/>
+                                    <path d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z" fill="#000000" fill-rule="nonzero" transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999) "/>
+                                    <path d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999) "/>
+                                </g>
+                            </svg>
+                            <!--end::Svg Icon-->
+                        </span>
+                    </button>
+                </div>
+                <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+
+
+                <div id="kt_aside_menu" class="aside-menu my-4 " data-menu-vertical="1">
+                    <ul class="menu-nav ">
+                        <li class="menu-section menu-section--first">
+                            <h4 class="menu-text">Блок соглашений</h4>
+                            <i class="menu-icon flaticon-more-v2"></i>
+                        </li>
+                        <li class="menu-item " aria-haspopup="true" >
+                            <a  href="http://localhost:8092/agreements/two-sides" class="menu-link ">
+                                <span class="svg-icon menu-icon">
+                                    <!--begin::Svg Icon | path:app/media/svg/icons/Navigation/Up-down.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <polygon points="0 0 24 0 24 24 0 24"/>
+                                            <rect fill="#000000" opacity="0.3" transform="translate(6.000000, 11.000000) rotate(-180.000000) translate(-6.000000, -11.000000) " x="5" y="5" width="2" height="12" rx="1"/>
+                                            <path d="M8.29289322,14.2928932 C8.68341751,13.9023689 9.31658249,13.9023689 9.70710678,14.2928932 C10.0976311,14.6834175 10.0976311,15.3165825 9.70710678,15.7071068 L6.70710678,18.7071068 C6.31658249,19.0976311 5.68341751,19.0976311 5.29289322,18.7071068 L2.29289322,15.7071068 C1.90236893,15.3165825 1.90236893,14.6834175 2.29289322,14.2928932 C2.68341751,13.9023689 3.31658249,13.9023689 3.70710678,14.2928932 L6,16.5857864 L8.29289322,14.2928932 Z" fill="#000000" fill-rule="nonzero"/>
+                                            <rect fill="#000000" opacity="0.3" transform="translate(18.000000, 13.000000) scale(1, -1) rotate(-180.000000) translate(-18.000000, -13.000000) " x="17" y="7" width="2" height="12" rx="1"/>
+                                            <path d="M20.2928932,5.29289322 C20.6834175,4.90236893 21.3165825,4.90236893 21.7071068,5.29289322 C22.0976311,5.68341751 22.0976311,6.31658249 21.7071068,6.70710678 L18.7071068,9.70710678 C18.3165825,10.0976311 17.6834175,10.0976311 17.2928932,9.70710678 L14.2928932,6.70710678 C13.9023689,6.31658249 13.9023689,5.68341751 14.2928932,5.29289322 C14.6834175,4.90236893 15.3165825,4.90236893 15.7071068,5.29289322 L18,7.58578644 L20.2928932,5.29289322 Z" fill="#000000" fill-rule="nonzero" transform="translate(18.000000, 7.500000) scale(1, -1) translate(-18.000000, -7.500000) "/>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-text">Двусторонние форматы</span>
+                            </a>
+                        </li>
+                        <li class="menu-item " aria-haspopup="true" >
+                            <a  href="http://localhost:8092/agreements/blocs" class="menu-link ">
+                                <span class="svg-icon menu-icon">
+                                    <!--begin::Svg Icon | path:app/media/svg/icons/Design/Position.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <polygon points="0 0 24 0 24 24 0 24"/>
+                                            <path d="M6,18 L9,18 C9.66666667,18.1143819 10,18.4477153 10,19 C10,19.5522847 9.66666667,19.8856181 9,20 L4,20 L4,15 C4,14.3333333 4.33333333,14 5,14 C5.66666667,14 6,14.3333333 6,15 L6,18 Z M18,18 L18,15 C18.1143819,14.3333333 18.4477153,14 19,14 C19.5522847,14 19.8856181,14.3333333 20,15 L20,20 L15,20 C14.3333333,20 14,19.6666667 14,19 C14,18.3333333 14.3333333,18 15,18 L18,18 Z M18,6 L15,6 C14.3333333,5.88561808 14,5.55228475 14,5 C14,4.44771525 14.3333333,4.11438192 15,4 L20,4 L20,9 C20,9.66666667 19.6666667,10 19,10 C18.3333333,10 18,9.66666667 18,9 L18,6 Z M6,6 L6,9 C5.88561808,9.66666667 5.55228475,10 5,10 C4.44771525,10 4.11438192,9.66666667 4,9 L4,4 L9,4 C9.66666667,4 10,4.33333333 10,5 C10,5.66666667 9.66666667,6 9,6 L6,6 Z" fill="#000000" fill-rule="nonzero"/>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-text">Соглашения в блоке</span>
+                            </a>
+                        </li>
+                        <li class="menu-item " aria-haspopup="true" >
+                            <a  href="http://localhost:8092/agreements/wg" class="menu-link ">
+                                <span class="svg-icon menu-icon">
+                                    <!--begin::Svg Icon | path:app/media/svg/icons/Design/Border.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24"/>
+                                            <path d="M7,6 C6.44771525,6 6,6.44771525 6,7 L6,17 C6,17.5522847 6.44771525,18 7,18 L17,18 C17.5522847,18 18,17.5522847 18,17 L18,7 C18,6.44771525 17.5522847,6 17,6 L7,6 Z M7,4 L17,4 C18.6568542,4 20,5.34314575 20,7 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 Z" fill="#000000" fill-rule="nonzero"/>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-text">Соглашения в РГ</span>
+                            </a>
+                        </li>
+                        <li class="menu-item " aria-haspopup="true" >
+                            <a  href="http://localhost:8092/agreements/signatories" class="menu-link ">
+                                <span class="svg-icon menu-icon">
+                                    <!--begin::Svg Icon | path:app/media/svg/icons/Design/Crop.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24"/>
+                                            <path d="M10,6 L14.5,6 C16.709139,6 18,7.290861 18,9.5 L18,14 L16,14 L16,9.5 C16,8.3954305 15.6045695,8 14.5,8 L10,8 L10,6 Z M8,6 L8,8 L4,8 C3.44771525,8 3,7.55228475 3,7 C3,6.44771525 3.44771525,6 4,6 L8,6 Z M18,16 L18,20 C18,20.5522847 17.5522847,21 17,21 C16.4477153,21 16,20.5522847 16,20 L16,16 L18,16 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                                            <path d="M7,5 C6.44771525,5 6,4.55228475 6,4 C6,3.44771525 6.44771525,3 7,3 L17.5,3 C19.709139,3 21,4.290861 21,6.5 L21,17 C21,17.5522847 20.5522847,18 20,18 C19.4477153,18 19,17.5522847 19,17 L19,6.5 C19,5.3954305 18.6045695,5 17.5,5 L7,5 Z" fill="#000000" fill-rule="nonzero" transform="translate(13.500000, 10.500000) rotate(-180.000000) translate(-13.500000, -10.500000) "/>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-text">Соглашения/подписанты</span>
+                            </a>
+                        </li>
+                        <li class="menu-section ">
+                            <h4 class="menu-text">Настройки</h4>
+                            <i class="menu-icon flaticon-more-v2"></i>
+                        </li>
+                        <li class="menu-item " aria-haspopup="true">
+                            <a  href="http://localhost:8092/settings/countries" class="menu-link ">
+                                <span class="svg-icon menu-icon">
+                                    <!--begin::Svg Icon | path:app/media/svg/icons/Map/Position.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <rect x="0" y="0" width="24" height="24"/>
+                                            <path d="M19,11 L21,11 C21.5522847,11 22,11.4477153 22,12 C22,12.5522847 21.5522847,13 21,13 L19,13 C18.4477153,13 18,12.5522847 18,12 C18,11.4477153 18.4477153,11 19,11 Z M3,11 L5,11 C5.55228475,11 6,11.4477153 6,12 C6,12.5522847 5.55228475,13 5,13 L3,13 C2.44771525,13 2,12.5522847 2,12 C2,11.4477153 2.44771525,11 3,11 Z M12,2 C12.5522847,2 13,2.44771525 13,3 L13,5 C13,5.55228475 12.5522847,6 12,6 C11.4477153,6 11,5.55228475 11,5 L11,3 C11,2.44771525 11.4477153,2 12,2 Z M12,18 C12.5522847,18 13,18.4477153 13,19 L13,21 C13,21.5522847 12.5522847,22 12,22 C11.4477153,22 11,21.5522847 11,21 L11,19 C11,18.4477153 11.4477153,18 12,18 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                                            <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="2"/>
+                                            <path d="M12,17 C14.7614237,17 17,14.7614237 17,12 C17,9.23857625 14.7614237,7 12,7 C9.23857625,7 7,9.23857625 7,12 C7,14.7614237 9.23857625,17 12,17 Z M12,19 C8.13400675,19 5,15.8659932 5,12 C5,8.13400675 8.13400675,5 12,5 C15.8659932,5 19,8.13400675 19,12 C19,15.8659932 15.8659932,19 12,19 Z" fill="#000000" fill-rule="nonzero"/>
+                                        </g>
+                                    </svg>
+                                    <!--end::Svg Icon-->
+                                </span>
+                                <span class="menu-text">Страны</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                <div class="content  d-flex flex-column flex-column-fluid" id="kt_content">
+                    <div class="d-flex flex-column-fluid">
+                    <div class="" id="overlay"></div>
+                    <div class="">
+                        <div class="card card-custom">
+                            <div class="card-header flex-wrap border-0 pt-6 pb-0">
+                                <div class="card-title">
+                                    <h3 class="card-label"> Лояльность
+                                        <div class="text-muted pt-2 font-size-sm">Список созданных лояльностей</div>
+                                    </h3>
+                                </div>
+                                <div class="card-toolbar">
+                                    <button href="#" class="btn btn-primary font-weight-bolder" type="button" data-toggle="modal" data-target="#loyaltyModal" id="open-form-modal">
+                                        <span class="svg-icon svg-icon-md">
+                                        <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24"/>
+                                                    <circle fill="#000000" cx="9" cy="15" r="6"/>
+                                                    <path d="M8.8012943,7.00241953 C9.83837775,5.20768121 11.7781543,4 14,4 C17.3137085,4 20,6.6862915 20,10 C20,12.2218457 18.7923188,14.1616223 16.9975805,15.1987057 C16.9991904,15.1326658 17,15.0664274 17,15 C17,10.581722 13.418278,7 9,7 C8.93357256,7 8.86733422,7.00080962 8.8012943,7.00241953 Z" fill="#000000" opacity="0.3"/>
+                                                </g>
+                                            </svg>
+                                        <!--end::Svg Icon-->
+                                        </span>Добавить запись
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <!--begin: Datatable-->
+                                <table class="table table-separate table-head-custom table-checkable" id="kt_datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>№ п/п</th>
+                                            <th>Цвет</th>
+                                            <th>Название</th>
+                                            <th>Действия</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <!--end: Datatable-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loyaltyModal" style="display: none" tabindex="-1" aria-labelledby="loyaltyModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="btn btn-danger btn-sm" id="clear-form" style="position: absolute; left: 20px; display: none">Очистить форму</button>
+                <h3 class="card-title mb-0" id="add-title">
+                    Добавить лояльность
+                </h3>
+                <h3 class="card-title mb-0" id="edit-title" style="display: none">
+                    Редактировать лояльность
+                </h3>
+            </div>
+            <div class="modal-body">
+                <div class="card card-custom example example-compact">
+                    <!--begin::Form-->
+                    <form id="loyalty-form" class="form" data-route="">
+                        <div class="card-body pb-0">
+                            <!--begin: Code-->
+                            <div class="form-group row">
+                                <label for="country-title-input" class="col-lg-4 col-sm-12 col-form-label text-right">Название лояльности: <span class="text-danger">*</span></label>
+                                <div class="col-lg-7 col-sm-12">
+                                    <input id="loyalty-title-input" class="form-control" name="title" type="text" placeholder="Ввведите название..." />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="loyalty-color" class="col-lg-4 col-sm-12  col-form-label text-right">Цвет: <span class="text-danger">*</span></label>
+                                <div class="col-lg-7 col-sm-12">
+                                    <input type="color" id="loyalty-color" name="color" value="#FFFFFE" style="width: 100%; height: calc(1.5em + 1.3rem + 2px);">
+                                </div>
+                            </div>
+                            <!--end: Code-->
+                        </div>
+                    </form>
+                    <!--end::Form-->
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" id="clear-close-form" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" id="submit-form">Добавить запись</button>
+                <button type="button" class="btn btn-primary" id="edit-form" style="display: none">Обновить запись</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script> var HOST_URL = `${window.location.origin}`;</script>
+    <script>
+    // var KTAppSettings = {
+    //     "breakpoints": {
+    //         "sm": 576,
+    //         "md": 768,
+    //         "lg": 992,
+    //         "xl": 1200,
+    //         "xxl": 1200
+    //     },
+    //     "colors": {
+    //         "theme": {
+    //             "base": {
+    //                 "white": "#ffffff",
+    //                 "primary": "#6993FF",
+    //                 "secondary": "#E5EAEE",
+    //                 "success": "#1BC5BD",
+    //                 "info": "#8950FC",
+    //                 "warning": "#FFA800",
+    //                 "danger": "#F64E60",
+    //                 "light": "#F3F6F9",
+    //                 "dark": "#212121"
+    //             },
+    //             "light": {
+    //                 "white": "#ffffff",
+    //                 "primary": "#E1E9FF",
+    //                 "secondary": "#ECF0F3",
+    //                 "success": "#C9F7F5",
+    //                 "info": "#EEE5FF",
+    //                 "warning": "#FFF4DE",
+    //                 "danger": "#FFE2E5",
+    //                 "light": "#F3F6F9",
+    //                 "dark": "#D6D6E0"
+    //             },
+    //             "inverse": {
+    //                 "white": "#ffffff",
+    //                 "primary": "#ffffff",
+    //                 "secondary": "#212121",
+    //                 "success": "#ffffff",
+    //                 "info": "#ffffff",
+    //                 "warning": "#ffffff",
+    //                 "danger": "#ffffff",
+    //                 "light": "#464E5F",
+    //                 "dark": "#ffffff"
+    //             }
+    //         },
+    //         "gray": {
+    //             "gray-100": "#F3F6F9",
+    //             "gray-200": "#ECF0F3",
+    //             "gray-300": "#E5EAEE",
+    //             "gray-400": "#D6D6E0",
+    //             "gray-500": "#B5B5C3",
+    //             "gray-600": "#80808F",
+    //             "gray-700": "#464E5F",
+    //             "gray-800": "#1B283F",
+    //             "gray-900": "#212121"
+    //         }
+    //     },
+    //     "font-family": "Poppins"
+    // };
+</script>
+    <script src="src/scripts/base/base.js" type="text/javascript"></script>
+    <script src="src/scripts/base/layout.js" type="text/javascript"></script>
+
+<!--    <script src="http://localhost:8092/app/plugins/global/plugins.bundle.js" type="text/javascript"></script>-->
+<!--    <script src="http://localhost:8092/app/plugins/custom/prismjs/prismjs.bundle.js" type="text/javascript"></script>-->
+<!--    <script src="http://localhost:8092/app/js/scripts.bundle.js" type="text/javascript"></script>-->
+<!--    <script src="http://localhost:8092/app/js/pages/widgets.js" type="text/javascript"></script>-->
+    <script>
+    // $('#kt_date_input').mask('00/00/0000', {
+    //     placeholder: "dd/mm/yyyy"
+    // });
+    //
+    // $('#kt_time_input').mask('00:00:00', {
+    //     placeholder: "hh:mm:ss"
+    // });
+    //
+    // $('#kt_date_time_input').mask('00/00/0000 00:00:00', {
+    //     placeholder: "dd/mm/yyyy hh:mm:ss"
+    // });
+    //
+    // $('#kt_cep_input').mask('00000-000', {
+    //     placeholder: "99999-999"
+    // });
+    //
+    // $('#kt_phone_input').mask('0000-0000', {
+    //     placeholder: "9999-9999"
+    // });
+    //
+    // $('#kt_phone_with_ddd_input').mask('(00) 0000-0000', {
+    //     placeholder: "(99) 9999-9999"
+    // });
+    //
+    // $('#kt_cpf_input').mask('000.000.000-00', {
+    //     reverse: true
+    // });
+    //
+    // $('#kt_cnpj_input').mask('00.000.000/0000-00', {
+    //     reverse: true
+    // });
+    //
+    // $('#kt_money_input').mask('000.000.000.000.000,00', {
+    //     reverse: true
+    // });
+    //
+    // $('#kt_money2_input').mask("#.##0,00", {
+    //     reverse: true
+    // });
+    //
+    // $('#kt_percent_input').mask('##0,00%', {
+    //     reverse: true
+    // });
+    //
+    // $('#kt_clear_if_not_match_input').mask("00/00/0000", {
+    //     clearIfNotMatch: true
+    // });
+</script>
+<!--    <script src="http://localhost:8092/app/plugins/custom/datatables/datatables.bundle.js?id=8947b0c405f96f8ad1ab" type="text/javascript"></script>-->
+<!--    <script src="http://localhost:8092/app/js/admin/classifiers/loyalty/index.js?id=9676e4ab0bd11ad0525c" type="text/javascript"></script>-->
+<!--    <script src="http://localhost:8092/app/js/pages/crud/datatables/data-sources/ajax-server-side.js?id=96e59219f64b36671a5b" type="text/javascript"></script>-->
+<!--    <script src="http://localhost:8092/app/js/app.js?id=bc70aef4374a1e400f1a" type="text/javascript"></script>-->
+</body>
+</html>
+

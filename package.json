@@ -1,0 +1,25 @@
+{
+  "name": "adminbuilder",
+  "version": "1.0.0",
+  "description": "admin panel creator based typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "parcel-watch": "parcel -p 4444 index.html",
+    "parcel-build": "parcel build index.html --public-url ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.43.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "es6-shim": "^0.35.6",
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1",
+    "popper.js": "^1.16.1",
+    "select2": "^4.1.0-rc.0"
+  }
+}
