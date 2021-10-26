@@ -1,8 +1,17 @@
+@import "variables";
+
+@font-face {
+  font-family: "Moscow Sans";
+  src: url("../assets/fonts/moscowsansregular.ttf") format("truetype")
+  /*url("/fonts/OpenSans-Regular-webfont.woff") format("woff");*/
+}
+
 body {
-  background: #EEF0F8;
+  background: #F7F7FF;
   display: flex;
   flex-direction: column;
   color: #3F4254;
+  font-family: "Moscow Sans", serif !important;
 }
 
 html, body {
@@ -58,14 +67,25 @@ a {
 
 .btn-primary{
   color: #FFFFFF;
-  background-color: #3699FF;
-  border-color: #3699FF;
+  background-color: #577399;
+  border-color: #577399;
   border-radius: 0.42rem;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
  .svg-icon svg g [fill] {
     transition: fill 0.3s ease;
     fill: #FFFFFF;
+  }
+
+  &:hover{
+    background-color: #23283a;
+    border-color: #23283a;
+  }
+
+  &:focus{
+    background-color: #23283a;
+    border-color: #23283a;
+    box-shadow: 0 0 0 0.2rem rgba(16, 57, 103, 0.5);
   }
 }
 
@@ -131,3 +151,201 @@ div.dataTables_wrapper div.dataTables_filter {
   overflow-y: hidden;
 }
 
+.mb-10, .my-10 {
+  margin-bottom: 2.5rem
+  !important;
+}
+
+.symbol {
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 0.42rem;
+}
+
+.symbol.symbol-40 .symbol-label {
+  width: 60px;
+  height: 40px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: #3F4254;
+  background-color: #F3F6F9;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0.42rem
+;
+}
+
+.symbol.symbol-light-primary .symbol-label {
+  background-color: #E1F0FF;
+  color: #3699FF;
+}
+
+.symbol.symbol-light-warning .symbol-label {
+  background-color: #FFF4DE;
+  color: #FFA800;
+}
+.symbol.symbol-light-success .symbol-label {
+  background-color: #C9F7F5;
+  color: #1BC5BD;
+}
+
+.symbol.symbol-light-danger .symbol-label {
+  background-color: #FFE2E5;
+  color: #F64E60;
+}
+
+.symbol.symbol-light-info .symbol-label {
+  background-color: #EEE5FF;
+  color: #8950FC;
+}
+
+.is-active {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+.fileuploader{
+  margin: 0;
+}
+
+.own-validate-invalid{
+  border-color:   #F64E60 !important;
+}
+.own-validate-valid{
+  border-color:  #1BC5BD !important;
+}
+
+.fileuploader-thumbnails-input{
+
+}
+
+.status-active{
+
+  margin: 0 auto;
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: $is-active;
+  border-color: $is-active;
+  box-shadow: 0 0 5px $is-active
+}
+
+.status-inactive{
+
+  margin: 0 auto;
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: $is-inactive;
+  border-color: $is-inactive;
+  box-shadow: 0 0 5px $is-inactive
+}
+
+.country-list{
+  list-style-type: none;
+  padding: 0;
+}
+
+.is-active{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+input[type='radio'] {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[id="active"]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid $is-active;
+}
+
+input[id="active"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $is-active;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
+input[id="inactive"]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid $is-inactive;
+}
+
+input[id="inactive"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $is-inactive;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
+.select2-search__field{
+  width: 100% !important;
+}
+
+#kt_content {
+  //justify-content: center;
+
+  & > .d-flex {
+    width: 100%;
+    justify-content: center;
+
+    & > div {
+      width: 90%;
+    }
+  }
+}

@@ -3,7 +3,6 @@ window.jQuery = window.$ = require('jquery');
 require('bootstrap');
 window.Popper = require('popper.js').default;
 
-
 window.moment = require('moment');
 
 require("es6-shim/es6-shim.min.js");

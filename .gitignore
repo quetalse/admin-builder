@@ -1,4 +1,4 @@
-node_modules
-.cache
-.idea
-dist
+/node_modules
+/.cache
+/.idea
+/dist

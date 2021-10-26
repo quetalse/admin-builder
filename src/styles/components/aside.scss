@@ -6,7 +6,7 @@
 }
 
 .aside {
-  background-color: #1e1e2d;
+  background-color: #23283A;
   width: 265px;
 
   &-menu{
@@ -20,7 +20,7 @@
         height: 40px;
 
         .menu-text{
-          color: #4c4e6f;
+          color: #9496b2;
 
           font-size: 0.9rem;
           font-weight: 500;
@@ -75,6 +75,7 @@
           text-decoration: none;
           position: relative;
           outline: none;
+          align-items: center;
 
           & > .menu-icon{
             display: flex;
@@ -120,12 +121,20 @@
 
   .brand-logo{
     display: flex;
+
+    a{
+      text-align: center;
+
+      img{
+        width: 86%;
+      }
+    }
   }
 }
 
 @media (min-width: 992px){
   .brand {
-    background-color: #1a1a27;
+    background-color: #23283A;
     box-shadow: none;
   }
 }
@@ -209,7 +218,7 @@
   }
 }
 @media (max-width: 991.98px){
-  .brand {
+  .brand-toggle  {
     display: none;
   }
 }
@@ -248,7 +257,7 @@
 }
 
 .menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover > .menu-link {
-  background-color: #1b1b28;
+  background-color: #202535;
 }
 
 .menu-nav > .menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover > .menu-link .menu-icon {

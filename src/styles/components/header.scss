@@ -89,7 +89,7 @@
 
 @media (max-width: 991.98px){
   .header-mobile {
-    background-color: #1a1a27;
+    background-color: #23283A;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,6 +98,16 @@
     min-height: 55px;
     position: relative;
     z-index: 3;
+    padding: 6px;
+
+    .mobile-logo{
+      height: 100%;
+
+      img{
+        height: 100%;
+        margin-left: 10px;
+      }
+    }
 
     .burger-icon{
 

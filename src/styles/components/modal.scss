@@ -18,4 +18,74 @@
       transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
   }
+
+  .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1.75rem
+  ;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    border-top: 1px solid #EBEDF3;
+    border-bottom-right-radius: 0.42rem;
+    border-bottom-left-radius: 0.42rem;
+  }
+
+  .btn.btn-secondary {
+    color: #3F4254;
+    background-color: #E4E6EF;
+    border-color: #E4E6EF;
+
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.42rem;
+  }
+
+  .btn.btn-primary {
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.42rem;
+  }
 }
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #3F4254;
+
+  padding-top: calc(0.65rem + 1px);
+  padding-bottom: calc(0.65rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+.text-danger {
+  color: #F64E60 !important;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1.3rem + 2px);
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #3F4254;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: 1px solid #E4E6EF;
+  border-radius: 0.42rem;
+  box-shadow: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
