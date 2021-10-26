@@ -1,0 +1,131 @@
+#admin-builder_datatable_wrapper{
+  color:  #23283a;
+
+  .top{
+    #admin-builder_datatable_filter{
+      float: none;
+
+      label{
+        width: 100%;
+
+        input{
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color:  #23283a;
+          background-color: #ffffff;
+          background-clip: padding-box;
+          border: 1px solid #E4E6EF;
+          border-radius: 0.42rem;
+          outline-offset: 0px;
+          outline-style: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.4em 0;
+
+    .dataTables_length{
+      float: none;
+
+      label{
+        margin: 0;
+
+        select{
+          background-color: #ecf1f6;
+          align-items: center;
+          padding: 0.8em 0.3em;
+          border: none;
+          outline: none;
+    }
+  }
+}
+    .dataTables_info{
+      flex-grow: 1;
+      margin-left: 10px;
+      padding: 0;
+      text-align: left;
+    }
+    .dataTables_paginate{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0 !important;
+
+      #admin-builder_datatable_previous, #admin-builder_datatable_next{
+        background-color: #ecf1f6;
+        align-items: center;
+        //height: 2.25rem;
+        min-width: 2.25rem;
+        padding: 0.5em 1em;
+
+        svg{
+          width: 14px;
+          height: 14px;
+        }
+
+        &:hover{
+          background: #577399;
+        }
+      }
+
+      .paginate_button{
+
+        box-sizing: border-box;
+        display: inline-block;
+        min-width: 1.5em;
+        padding: 0.5em 1em;
+        margin-left: 2px;
+        text-align: center;
+        text-decoration: none !important;
+        cursor: pointer;
+        *cursor: hand;
+        color: #333 ;
+        border: 1px solid transparent;
+        border-radius: 2px;
+
+        &:hover{
+          background: #577399;
+        }
+      }
+      .current{
+        background: #577399;
+        color: #FFFFFF !important;
+      }
+    }
+  }
+
+  .dataTables_scroll{
+
+    .dataTables_scrollBody{
+      border: none;
+    }
+
+    .datatable-cell{
+      padding: 1rem 1rem;
+    }
+
+
+    .btn.btn-clean:hover:not(.btn-text):not(:disabled):not(.disabled) .svg-icon svg g [fill], .btn.btn-clean:focus:not(.btn-text) .svg-icon svg g [fill], .btn.btn-clean.focus:not(.btn-text) .svg-icon svg g [fill] {
+      -webkit-transition: fill 0.3s ease;
+      transition: fill 0.3s ease;
+      fill: #577399;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+  .dataTables_wrapper .dataTables_paginate {
+    margin-top: 0 !important;
+  }
+}

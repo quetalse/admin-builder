@@ -19,11 +19,11 @@ const instance = axios.create({
     }
 });
 
-const fileUploaderAPI = {
-    twosides: '',
-    bloc: '',
-    wg: ''
-}
+// const adminBuilderAPI = {
+//     twosides: '',
+//     bloc: '',
+//     wg: ''
+// }
 
 const select2API = {
     getData: function(route: string){
@@ -74,7 +74,7 @@ const datatablesAPI = {
     }
 }
 
-const autographAPI = {
+const adminBuilderAPI = {
     //////////////////// LOYALTY ///////////////////////////
     // https://docs.google.com/document/d/186VtU8Yh56rADhMxOGcIrND8aqj1CNgUh6a4EbTJ7E4/edit#
     getLoyalty: function(loyaltyId: number){
@@ -246,6 +246,6 @@ const autographAPI = {
     }
 };
 
-export { datatablesAPI, select2API, fileUploaderAPI }
+export { datatablesAPI, select2API }
 
-export default autographAPI;
+export default adminBuilderAPI;

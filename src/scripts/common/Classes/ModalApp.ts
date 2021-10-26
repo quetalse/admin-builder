@@ -69,7 +69,7 @@ export class ModalApp extends FormApp{
             this.dropForm();
             $('#countryModal').modal('hide');
 
-            $('#kt_datatable').DataTable().ajax.reload();
+            $('#admin-builder_datatable').DataTable().ajax.reload();
             sweetAlert.success(`${formData.get('title')}, добавлена!`).then(() => {
                 this.modalElement.modal('hide');
             });

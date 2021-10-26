@@ -93,7 +93,7 @@ export class DataTablesApp extends ModalApp{
                                this.crud.delete(recordId as number)
                                     .then(() => {
                                         sweetAlert.success('Успешно!')
-                                        $('#kt_datatable').DataTable().ajax.reload();
+                                        $('#admin-builder_datatable').DataTable().ajax.reload();
                                     })
                                     .catch((error: any) => alert(error));
                              }
@@ -108,11 +108,12 @@ export class DataTablesApp extends ModalApp{
     }
 
     initEventHandlers = () => {
-
+        // @ts-ignore
         Array.from(document.querySelectorAll(this.dataTableEditElements)).forEach(dataTableEditElements => {
             dataTableEditElements.addEventListener("click", this.onEditHandler)
         });
 
+        // @ts-ignore
         Array.from(document.querySelectorAll(this.dataTableDeleteElements)).forEach(dataTableDeleteElement => {
             dataTableDeleteElement.addEventListener("click", this.onDeleteHandler)
         });

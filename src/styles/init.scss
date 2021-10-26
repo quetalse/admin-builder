@@ -129,11 +129,11 @@ a {
   border-top: 0;
   border-bottom: 1px solid #EBEDF3;
 }
-div.dataTables_wrapper div.dataTables_filter input {
-  margin-left: 0.5em;
-  display: inline-block;
-  width: auto;
-}
+//div.dataTables_wrapper div.dataTables_filter input {
+//  margin-left: 0.5em;
+//  display: inline-block;
+//  width: auto;
+//}
 .form-control-sm {
   height: calc(1.35em + 1.1rem + 2px);
   padding: 0.55rem 0.75rem;
@@ -142,9 +142,9 @@ div.dataTables_wrapper div.dataTables_filter input {
   border-radius: 0.28rem;
 }
 
-div.dataTables_wrapper div.dataTables_filter {
-  text-align: right;
-}
+//div.dataTables_wrapper div.dataTables_filter {
+//  text-align: right;
+//}
 
 .modal-open .modal {
   overflow-x: hidden;
@@ -337,7 +337,7 @@ input[id="inactive"]:checked::after {
   width: 100% !important;
 }
 
-#kt_content {
+#admin-builder_content {
   //justify-content: center;
 
   & > .d-flex {

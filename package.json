@@ -5,21 +5,30 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "parcel-watch": "parcel -p 4444 index.html",
-    "parcel-build": "parcel build index.html --public-url ./"
+    "parcel-watch": "parcel -p 4444 index.html example1.html example2.html example3.html",
+    "parcel-build": "parcel build index.html example1.html example2.html example3.html --public-url ./"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jquery": "^3.5.8",
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.43.3"
+    "sass": "^1.43.3",
+    "typescript": "^4.4.4"
   },
   "dependencies": {
+    "@types/datatables.net": "^1.10.21",
+    "axios": "^0.24.0",
     "bootstrap": "^4.6.0",
+    "datatables.net": "^1.10.23",
+    "datatables.net-bs": "^1.11.3",
+    "datatables.net-dt": "^1.11.3",
+    "es6-promise": "^4.2.8",
     "es6-shim": "^0.35.6",
     "jquery": "^3.6.0",
     "moment": "^2.29.1",
     "popper.js": "^1.16.1",
-    "select2": "^4.1.0-rc.0"
+    "select2": "^4.1.0-rc.0",
+    "sweetalert2": "^11.1.9"
   }
 }
