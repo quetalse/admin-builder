@@ -19,59 +19,30 @@ const instance = axios.create({
     }
 });
 
-// const adminBuilderAPI = {
-//     twosides: '',
-//     bloc: '',
-//     wg: ''
-// }
 
 const select2API = {
     getData: function(route: string){
         return instance.get(`${route}`);
     },
-    loyalty: {
-       all: HOST_URL + '/api/loyalty/select/',
-       byId: HOST_URL + '/api/loyalty/select?id=',                 //////////////
 
-       byCountryId: HOST_URL + '/api/loyalty/select?country_id=',
-    },
-    countries: {
-        all: HOST_URL + '/api/countries/select',
-        byId: HOST_URL + '/api/countries/select?id=',              ////////////////
-
-        byBlocId: HOST_URL + '/api/countries/select?bloc_id=',
-        byWgId: HOST_URL + '/api/countries/select?wg_id=',
-    },
-    blocs: {
-        all: HOST_URL + '/api/blocs/select',
-        byId: HOST_URL + '/api/blocs/select?id=',                  //////////////////
-
-        byWgId: HOST_URL + '/api/blocs/select?wg_id=',
-    },
-    wg: {
-        all: HOST_URL + '/api/wg/select',
-        byId: HOST_URL + '/api/wg/select?id=',                     /////////////////
-
-        byBlocId: HOST_URL + '/api/wg/select?bloc_id=',
+    example1: {
+        items1: {
+            all: HOST_URL + '/api/example1/select/items1',
+            byId: HOST_URL + '/api/example1/select/items1?id='
+        },
+        items2: {
+            all: HOST_URL + '/api/example1/select/items2',
+            byId: HOST_URL + '/api/example1/select/items2?id=',
+            byItems1Id: HOST_URL + '/api/example1/select/items2?items1Id=',
+        }
     }
 }
 
 const datatablesAPI = {
-    settings: {
-        countries: HOST_URL + '/api/datatables/countries/',
-        blocs: HOST_URL + '/api/datatables/blocs/',
-        wg: HOST_URL + '/api/datatables/wg/',
-    },
-    classifiers: {
-        loyalty: HOST_URL + '/api/datatables/loyalty/'
-    },
-    agreements: {
-        twoSides: HOST_URL + '/api/datatables/agreements?type=twosides',
 
-        blocs: HOST_URL + '/api/datatables/agreements?type=blocs',
-        wg: HOST_URL + '/api/datatables/agreements?type=wg',
-        signatories: HOST_URL + '/api/datatables/agreements?type=signatories',
-    }
+    example1: HOST_URL + '/api/datatables/example1/',
+    example2: HOST_URL + '/api/datatables/example2/',
+    example3: HOST_URL + '/api/datatables/example3/'
 }
 
 const adminBuilderAPI = {
@@ -154,6 +125,52 @@ const adminBuilderAPI = {
             }
         }
     },
+
+    example1:{
+        add: function (data: Loyalty) {
+            return instance.post('/api/example1', data);
+        },
+        edit: function (id: number, data: Country) {
+            return instance.post(`/api/example1/${id}`, data)
+        },
+        delete: function(id: number){
+            return instance.post(`/api/example1/${id}/remove`)
+        },
+        get: function(id: number){
+            return instance.get(`/api/example1/${id}/read`)
+        }
+    },
+
+    example2:{
+        add: function (data: Loyalty) {
+            return instance.post('/api/example2', data);
+        },
+        edit: function (id: number, data: Country) {
+            return instance.post(`/api/example2/${id}`, data)
+        },
+        delete: function(id: number){
+            return instance.post(`/api/example2/${id}/remove`)
+        },
+        get: function(id: number){
+            return instance.get(`/api/example2/${id}/read`)
+        }
+    },
+
+    example3:{
+        add: function (data: Loyalty) {
+            return instance.post('/api/example3', data);
+        },
+        edit: function (id: number, data: Country) {
+            return instance.post(`/api/example3/${id}`, data)
+        },
+        delete: function(id: number){
+            return instance.post(`/api/example3/${id}/remove`)
+        },
+        get: function(id: number){
+            return instance.get(`/api/example3/${id}/read`)
+        }
+    },
+
     classifiers: {
         loyalty: {
             // https://docs.google.com/document/d/186VtU8Yh56rADhMxOGcIrND8aqj1CNgUh6a4EbTJ7E4/edit#heading=h.zhqdxhkcxjvy

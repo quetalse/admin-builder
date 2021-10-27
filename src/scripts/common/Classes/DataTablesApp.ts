@@ -92,7 +92,7 @@ export class DataTablesApp extends ModalApp{
                                  //@ts-ignore
                                this.crud.delete(recordId as number)
                                     .then(() => {
-                                        sweetAlert.success('Успешно!')
+                                        sweetAlert.success('Success!')
                                         $('#admin-builder_datatable').DataTable().ajax.reload();
                                     })
                                     .catch((error: any) => alert(error));

@@ -1,6 +1,6 @@
 import autographAPI from "../api";
 import {Select2App, Select2AppT} from "./Select2App";
-// import {FileUploaderApp, FileUploaderAppT} from "./FileUploaderApp";
+import {FileUploaderApp, FileUploaderAppT} from "./FileUploaderApp";
 import jqXHR = JQuery.jqXHR;
 import sweetAlert from "../sweetAlert";
 
@@ -15,7 +15,7 @@ declare const window: Window &
 export type FormAppT = {
     select2Data: Select2AppT, // data for select2App Class
 
-    // fileUploaderData?: FileUploaderAppT,
+    fileUploaderData?: FileUploaderAppT,
 
     select2Request?: (route: string) => any
     formElement: HTMLFormElement,
@@ -25,11 +25,11 @@ export type FormAppT = {
 
 export class FormApp extends Select2App{
     fileUploaderData?: {
-        fileUploaderUrl: string;
-        $fileUploader: JQuery<HTMLElement>;
+        fileUploaderUrl?: string;
+        $fileUploader?: JQuery<HTMLElement>;
         inputFileElement: HTMLElement;
-        preloadFileUploader: () => jqXHR<any>;
-        initFileUploader: () => JQuery
+        preloadFileUploader?: () => jqXHR<any>;
+        initFileUploader?: () => JQuery
     }
 
     formElement: HTMLFormElement
@@ -39,7 +39,7 @@ export class FormApp extends Select2App{
 
     constructor({
         select2Data, // data for select2App Class
-        // fileUploaderData,
+        fileUploaderData,
 
         select2Request,
         formElement,
@@ -49,7 +49,7 @@ export class FormApp extends Select2App{
     ){
         super(select2Data)
 
-        // if(fileUploaderData) this.fileUploaderData = new FileUploaderApp(fileUploaderData)
+        if(fileUploaderData) this.fileUploaderData = new FileUploaderApp(fileUploaderData)
 
         this.formElement = formElement
         this.select2Request = select2Request
@@ -247,13 +247,23 @@ export class FormApp extends Select2App{
                     let elemType = (element as HTMLInputElement).type;
                     let elemName = (element as HTMLInputElement).name;
                     let elemTag = (element as HTMLInputElement).tagName;
+
+                    console.log('recordData', recordData)
+                    console.log('elemType', elemType)
+                    console.log('elemName', elemName)
+                    console.log('elemTag', elemTag)
+
                     if(elemType === 'text'){
+                        (element as HTMLInputElement).value = recordData[elemName];
+                    }
+                    else if(elemType === 'textarea'){
                         (element as HTMLInputElement).value = recordData[elemName];
                     }
                     else if(elemType === 'file'){
 
                     }
                     else if(elemType === 'color'){
+
                         (element as HTMLInputElement).value = recordData[elemName];
                     }
                     else if(elemTag === 'SELECT'){

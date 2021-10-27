@@ -22,7 +22,6 @@ const dtOverall: IdtOverall = {
                 orderable: false,
                 className: "dt-center",
                 render: function(data, type, full, meta) {
-                    console.log('data', data)
                     return `<img alt="pic" src=${data || '/app/media/stock_flag.png'} width=${24} style="border-radius: 2px"/>`;
                 }
             };
@@ -68,7 +67,7 @@ const dtOverall: IdtOverall = {
 <!--							  	</div>\-->
 <!--							</div>\-->
                             <div class="record-action">
-                                <a href="" class="btn btn-sm btn-clean btn-icon record-action__edit" data-id=${data.id} data-row=${meta.row} title="Edit details">\
+                                <a href="#" class="btn btn-sm btn-clean btn-icon record-action__edit" data-id=${data.id} data-row=${meta.row} title="Edit details">\
                                     <span class="svg-icon svg-icon-md">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -78,7 +77,7 @@ const dtOverall: IdtOverall = {
                                          </svg>
                                      </span>
                                 </a>
-                                <a href="" class="btn btn-sm btn-clean btn-icon record-action__delete" data-id=${data.id} data-row=${meta.row} title="Delete">
+                                <a href="#" class="btn btn-sm btn-clean btn-icon record-action__delete" data-id=${data.id} data-row=${meta.row} title="Delete">
                                     <span class="svg-icon svg-icon-md">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">\t                                    
                                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

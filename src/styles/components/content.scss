@@ -68,3 +68,28 @@
 #overlay{
   display: none;
 }
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #23283a;
+  border-color: #23283a;
+}
+
+.custom-swal-submit-btn{
+  color: $white-color;
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+.swal2-container .swal2-styled.swal2-confirm {
+  border: 0;
+  border-radius: .25em;
+  background-color: #f1416c;
+  border-color: #f1416c;
+  box-shadow: 0 0 5px #f1416c;
+  color: #fff;
+  font-size: 1em;
+
+  &:focus{
+    box-shadow: 0 0 5px #f1416c;
+  }
+}

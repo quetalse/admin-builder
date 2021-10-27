@@ -41,6 +41,10 @@
         }
       }
 
+      & > .active {
+        background-color: #202535;
+      }
+
       & > .menu-item{
         position: relative;
         margin: 0;
@@ -213,6 +217,10 @@
         .menu-link .menu-text {
           display: none;
         }
+      }
+
+      .active{
+        background-color: #202535;
       }
     }
   }

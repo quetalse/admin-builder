@@ -42,18 +42,18 @@ const sweetAlert: IsweetAlert = {
             allowOutsideClick: false,
             showDenyButton: true,
             confirmButtonColor: '#187DE4',
-            confirmButtonText: `Попрбовать ещё раз`,
-            denyButtonText: 'Закрыть',
+            confirmButtonText: `Try again`,
+            denyButtonText: 'Close',
             width: 300
         })
     },
     confirm: (textHtml) => {
         return customSwal.fire({
-            title: 'Вы уверены что хотите удалить?',
+            title: 'Are u sure?',
             html: textHtml,
             icon: 'warning',
-            confirmButtonText: `Да`,
-            cancelButtonText: 'Отмена',
+            confirmButtonText: `Yeap`,
+            cancelButtonText: 'Cancel',
         })
     },
     //@ts-ignore

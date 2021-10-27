@@ -19,18 +19,17 @@ declare const window: Window &
 const dtSettings = {
     scrollX: true,
     ajax: {
-        url: datatablesAPI.example1,
+        url: datatablesAPI.example2,
         type: 'POST',
         data: {
             // parameters for custom backend script demo
-            columnsDef: [ 'id', 'title', 'is_active', 'items']
+            columnsDef: [ 'id', 'color', 'title']
         },
     },
     columns: [
         {data: 'id'},
+        {data: 'color'},
         {data: 'title'},
-        {data: 'is_active'},
-        {data: 'items'},
         {data: null},
         // null,
     ],
@@ -39,7 +38,7 @@ const dtSettings = {
         {
             targets: 0,
             orderable: false,
-            className: "dt-center",
+            className: "dt-center datatable-cell",
             render: function(data: any, type: any, full: any, meta: any) {
                 return `${meta.row + 1}`;
             },
@@ -47,41 +46,31 @@ const dtSettings = {
         {
             targets: 1,
             orderable: false,
-            className: "dt-center"
+            className: "dt-center datatable-cell",
+            render: function(data: any, type: any, full: any, meta: any) {
+                return `<span style="margin: 0 auto; display: block; width: 10px; height: 10px; border-radius: 50%; background-color: ${data}; border-color: ${data}; box-shadow: 0 0 5px ${data};"></span>`;
+            },
         },
         {
             targets: 2,
             orderable: false,
-            className: "dt-center",
-            render: function(data: any, type: any, full: any, meta: any) {
-                return `<span class=${data ? 'status-active' : 'status-inactive'}></span>`;
-            },
-        },
-        {
-            targets: -2,
-            orderable: false,
-            className: "dt-center",
-            render: function(data: any) {
-                let listView = document.createElement('ul');
-                listView.classList.add('country-list');
-
-                for(let i = 0; i < data.length; i++){
-                    let listViewItem = document.createElement('li');
-                    listViewItem.appendChild(document.createTextNode(data[i]));
-                    listView.appendChild(listViewItem);
-                }
-                return listView.outerHTML;
-            },
+            className: "dt-center datatable-cell"
         },
         dtOverall.actions(-1)
-    ]
+    ],
 }
+
+// window.page_dt_config = dtSettings;
 
 $(function() {
 
     var initTable1 = function() {
         var table = $('#admin-builder_datatable');
 
+
+        // $(table)
+
+        // // begin first table
         table.DataTable({
             responsive: true,
             searchDelay: 500,
@@ -116,14 +105,18 @@ $(function() {
                             <i class='fa fa-spinner fa-spin fa-stack-2x fa-fw'></i>\n\
                        </span>&emsp;Processing ...",
             }
+        }).on( 'draw.dt', () => {
+            console.log('sadasd')
         });
     };
 
     initTable1();
 
+
     let ownPage = new DataTablesApp({
 
-        crud: adminBuilderAPI.example1,
+        crud: adminBuilderAPI.example2,
+
 
         dataTableElement: document.getElementById('admin-builder_datatable') as HTMLElement,
         dataTableEditElements: '.record-action__edit',
@@ -133,33 +126,13 @@ $(function() {
             modalElement: document.getElementById('example-modal') as HTMLElement,
             openModalBtn: document.getElementById('open-form-modal') as HTMLElement,
             formData: {
-                select2Request: select2API.getData,
                 select2Data: {
                     selectElements: [],
-                    selectFormElements: [
-                        {
-                            element: document.getElementById('items-select2') as HTMLElement,
-                            ajax: select2API.example1.items1.all,
-                            ajaxById: select2API.example1.items1.byId,
-                            multiple: true,
-                            placeholder: "select items...",
-                            dependencyFor: "items2-select2",
-                            dependencyUrl: select2API.example1.items2.byItems1Id
-                        },
-                        {
-                            element: document.getElementById('items2-select2') as HTMLElement,
-                            ajax: select2API.example1.items2.byItems1Id,
-                            ajaxById: select2API.example1.items2.byId,
-                            placeholder: "select items...",
-                            multiple: true,
-                            disabled: true,
-                            dependencyFrom: "items-select2"
-                        }
-                    ]
+                    selectFormElements: []
                 },
                 formElement: document.getElementById('example-form') as HTMLFormElement,
                 submitBtnForm: document.getElementById('submit-form') as HTMLElement ,
-                formFields: ['title', 'items_id[]', 'items2_id[]'] // names
+                formFields: ['title', 'color']
             }
         }
     })

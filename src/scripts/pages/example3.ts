@@ -19,69 +19,42 @@ declare const window: Window &
 const dtSettings = {
     scrollX: true,
     ajax: {
-        url: datatablesAPI.example1,
+        url: datatablesAPI.example3,
         type: 'POST',
         data: {
             // parameters for custom backend script demo
-            columnsDef: [ 'id', 'title', 'is_active', 'items']
-        },
+            columnsDef: [ 'id', 'flag', 'title',  'comments']
+        }
     },
     columns: [
         {data: 'id'},
-        {data: 'title'},
-        {data: 'is_active'},
-        {data: 'items'},
-        {data: null},
-        // null,
+        {data: 'flag'},
+        {data: 'title', className: "dt-center"},
+        // {data: 'short_title', className: "dt-center"},
+        // {data: 'loyalty', className: "dt-center"},
+        {data: 'comments', className: "dt-center"},
+        {data: null, className: "dt-center"}
+
     ],
 
     columnDefs: [
-        {
-            targets: 0,
-            orderable: false,
-            className: "dt-center",
-            render: function(data: any, type: any, full: any, meta: any) {
-                return `${meta.row + 1}`;
-            },
-        },
-        {
-            targets: 1,
-            orderable: false,
-            className: "dt-center"
-        },
-        {
-            targets: 2,
-            orderable: false,
-            className: "dt-center",
-            render: function(data: any, type: any, full: any, meta: any) {
-                return `<span class=${data ? 'status-active' : 'status-inactive'}></span>`;
-            },
-        },
-        {
-            targets: -2,
-            orderable: false,
-            className: "dt-center",
-            render: function(data: any) {
-                let listView = document.createElement('ul');
-                listView.classList.add('country-list');
-
-                for(let i = 0; i < data.length; i++){
-                    let listViewItem = document.createElement('li');
-                    listViewItem.appendChild(document.createTextNode(data[i]));
-                    listView.appendChild(listViewItem);
-                }
-                return listView.outerHTML;
-            },
-        },
+        dtOverall.sequential(0),
+        dtOverall.img(1),
         dtOverall.actions(-1)
-    ]
+    ],
 }
+
+// window.page_dt_config = dtSettings;
 
 $(function() {
 
     var initTable1 = function() {
         var table = $('#admin-builder_datatable');
 
+
+        // $(table)
+
+        // // begin first table
         table.DataTable({
             responsive: true,
             searchDelay: 500,
@@ -121,9 +94,11 @@ $(function() {
 
     initTable1();
 
+
     let ownPage = new DataTablesApp({
 
-        crud: adminBuilderAPI.example1,
+        crud: adminBuilderAPI.example3,
+
 
         dataTableElement: document.getElementById('admin-builder_datatable') as HTMLElement,
         dataTableEditElements: '.record-action__edit',
@@ -133,33 +108,18 @@ $(function() {
             modalElement: document.getElementById('example-modal') as HTMLElement,
             openModalBtn: document.getElementById('open-form-modal') as HTMLElement,
             formData: {
-                select2Request: select2API.getData,
                 select2Data: {
                     selectElements: [],
-                    selectFormElements: [
-                        {
-                            element: document.getElementById('items-select2') as HTMLElement,
-                            ajax: select2API.example1.items1.all,
-                            ajaxById: select2API.example1.items1.byId,
-                            multiple: true,
-                            placeholder: "select items...",
-                            dependencyFor: "items2-select2",
-                            dependencyUrl: select2API.example1.items2.byItems1Id
-                        },
-                        {
-                            element: document.getElementById('items2-select2') as HTMLElement,
-                            ajax: select2API.example1.items2.byItems1Id,
-                            ajaxById: select2API.example1.items2.byId,
-                            placeholder: "select items...",
-                            multiple: true,
-                            disabled: true,
-                            dependencyFrom: "items-select2"
-                        }
-                    ]
+                    selectFormElements: []
                 },
                 formElement: document.getElementById('example-form') as HTMLFormElement,
                 submitBtnForm: document.getElementById('submit-form') as HTMLElement ,
-                formFields: ['title', 'items_id[]', 'items2_id[]'] // names
+                formFields: ['title', 'description'],
+
+                fileUploaderData: {
+                    fileUploaderUrl: "fileUploaderAPI.twosides",
+                    inputFileElement: document.querySelector('input.gallery_media') as HTMLElement,
+                }
             }
         }
     })
